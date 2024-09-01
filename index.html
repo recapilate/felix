@@ -38,21 +38,20 @@
             gap: 15px;
         }
 
-        .navbar .buttons a {
-            text-decoration: none;
-            color: white;
-            border:  2px solid transparent;
-            padding: 8px 20px;
-            border-radius: 0;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-        }
+       .navbar .buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
 
         .navbar .buttons a:hover {
-            background-color: white;
-            color: rgb(63, 178, 171);
-            border-color: rgb(63, 178, 171);
-        }
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background on hover */
+    color: rgb(63, 178, 171); /* Text color changes to match the theme */
+}
 
         .hamburger {
             display: none;
