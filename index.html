@@ -9,7 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: rgb(63, 178, 171);
-            scroll-behavior: smooth; /* Enables smooth scrolling */
+            scroll-behavior: smooth;
         }
 
         .navbar {
@@ -145,6 +145,26 @@
         section p {
             font-size: 24px;
         }
+
+        /* Button styles */
+        .btn-download {
+            background-color: white;
+            color: rgb(63, 178, 171);
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-download:hover {
+            background-color: rgb(63, 178, 171);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -165,6 +185,7 @@
     <section id="home">
         <h1>Welcome to the Home Page</h1>
         <p>This is the main page of Louigie Felix's website.</p>
+        <a href="https://drive.google.com/file/d/1xCpPJmsV3MotvM97Yyw0g4eYUtEuckR1/view?usp=sharing" class="btn-download" target="_blank">Download CV</a>
     </section>
 
     <section id="about">
