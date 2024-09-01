@@ -9,7 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: rgb(63, 178, 171);
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
         }
 
         .navbar {
@@ -123,10 +123,13 @@
             min-height: 100vh;
             color: white;
             text-align: center;
+            transition: opacity 0.5s ease-in-out; /* Smooth transition */
+            opacity: 0;
         }
 
         #home {
             background-color: rgb(63, 178, 171);
+            opacity: 1;
         }
 
         #about {
@@ -204,6 +207,26 @@
             buttons.classList.toggle('responsive');
             buttons.classList.toggle('show');
         }
+
+        // Add smooth transition effect when scrolling to each section
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.opacity = 0; // Fade out all sections
+                });
+
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                    targetSection.style.opacity = 1; // Fade in the target section
+                }, 300);
+            });
+        });
     </script>
 </body>
 </html>
