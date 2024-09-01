@@ -102,12 +102,7 @@
             }
 
             .navbar .buttons.responsive {
-                display: none;
-            }
-
-            .navbar .buttons.show {
                 display: flex;
-                flex-direction: column;
             }
 
             .navbar .buttons a {
@@ -167,6 +162,16 @@
         .btn-download:hover {
             background-color: rgb(63, 178, 171);
             color: white;
+        }
+
+        /* Responsive button styles */
+        @media (max-width: 768px) {
+            .btn-download {
+                padding: 10px 20px;
+                font-size: 16px;
+                display: block;
+                margin: 20px auto;
+            }
         }
     </style>
 </head>
