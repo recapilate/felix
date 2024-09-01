@@ -14,13 +14,13 @@
 
         .navbar {
             width: 100%;
-            padding: 10px 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.8); /* Darker background for a more professional look */
             color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             position: fixed;
             top: 0;
             left: 0;
@@ -29,29 +29,29 @@
         }
 
         .navbar .name {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
         }
 
         .navbar .buttons {
             display: flex;
-            gap: 10px;
+            gap: 15px;
         }
 
         .navbar .buttons a {
             text-decoration: none;
-            background-color: white;
-            color: rgb(63, 178, 171);
-            border: none;
-            padding: 8px 15px;
+            color: white;
+            border: 2px solid transparent;
+            padding: 8px 20px;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
         }
 
         .navbar .buttons a:hover {
-            background-color: rgb(63, 178, 171);
-            color: white;
+            background-color: white;
+            color: rgb(63, 178, 171);
+            border-color: rgb(63, 178, 171);
         }
 
         .hamburger {
@@ -61,10 +61,10 @@
         }
 
         .hamburger div {
-            width: 25px;
+            width: 30px;
             height: 3px;
             background-color: white;
-            margin: 4px 0;
+            margin: 5px 0;
             transition: 0.4s;
         }
 
@@ -74,7 +74,7 @@
             top: 60px;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
             display: none;
             z-index: 999;
         }
@@ -114,7 +114,7 @@
 
         /* Section styles */
         section {
-            padding: 100px 20px;
+            padding: 120px 20px;
             min-height: 100vh;
             color: white;
             text-align: center;
