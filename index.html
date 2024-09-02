@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louigie Felix's Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: rgb(63, 178, 171);
-            scroll-behavior: smooth; /* Enables smooth scrolling */
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .navbar {
@@ -18,7 +22,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.8); /* Darker background for a more professional look */
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             position: fixed;
@@ -38,20 +42,20 @@
             gap: 15px;
         }
 
-       .navbar .buttons a {
-    text-decoration: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
+        .navbar .buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
         .navbar .buttons a:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background on hover */
-    color: rgb(63, 178, 171); /* Text color changes to match the theme */
-}
+            background-color: rgba(255, 255, 255, 0.8);
+            color: rgb(63, 178, 171);
+        }
 
         .hamburger {
             display: none;
@@ -117,8 +121,9 @@
             min-height: 100vh;
             color: white;
             text-align: center;
-            transition: opacity 0.5s ease-in-out; /* Smooth transition */
+            transition: opacity 0.5s ease-in-out;
             opacity: 0;
+            flex: 1;
         }
 
         #home {
@@ -143,7 +148,6 @@
             font-size: 24px;
         }
 
-        /* Button styles */
         .btn-download {
             background-color: white;
             color: rgb(63, 178, 171);
@@ -163,7 +167,6 @@
             color: white;
         }
 
-        /* Responsive button styles */
         @media (max-width: 768px) {
             .btn-download {
                 padding: 10px 20px;
@@ -171,6 +174,33 @@
                 display: block;
                 margin: 20px auto;
             }
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+            margin-top: auto;
+        }
+
+        .footer-icons {
+            margin: 10px 0;
+        }
+
+        .footer-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+
+        .footer-icons a:hover {
+            color: rgb(63, 178, 171);
         }
     </style>
 </head>
@@ -205,6 +235,16 @@
         <p>This page contains additional information about Louigie Felix.</p>
     </section>
 
+    <footer>
+        <div class="footer-icons">
+            <a href="#" target="_blank" class="fab fa-facebook-f"> </a>
+            <a href="#" target="_blank" class="fab fa-instagram"> </a>
+            <a href="#" target="_blank" class="fab fa-linkedin-in"> </a>
+            <a href="#" target="_blank" class="fab fa-whatsapp"> </a>
+        </div>
+        <p>&copy; 2024 Louigie Felix. All rights reserved.</p>
+    </footer>
+
     <script>
         function toggleMenu() {
             const buttons = document.querySelector('.navbar .buttons');
@@ -212,7 +252,7 @@
             buttons.classList.toggle('show');
         }
 
-        // Add smooth transition effect when scrolling to each section
+        // Smooth transition effect when scrolling to each section
         document.querySelectorAll('.navbar a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
