@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-     <div class="hero-header">
+     <div class="hero-header" id="home">
         <div class="wrapper">
             <header>
                 <div class="logo">
@@ -24,11 +24,11 @@
                         <span></span>
                     </div>
                     <ul class="navlinks">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Resume</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -46,7 +46,7 @@
 
                     <div class="btn-group">
                        <a href="#" class="btn active">Download CV</a>
-                       <a href="#" class="btn">Contact</a>
+                       <a href="#contact" class="btn">Contact</a>
                     </div>
 
                     <div class="social">
@@ -54,31 +54,104 @@
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
                     </div>
                  </div>
             </div>
         </div>
      </div>
-     <!---typed js for typing text effect-->
+
+     <!-- Portfolio Section -->
+     <section id="portfolio">
+        <div class="wrapper">
+            <h2>Portfolio</h2>
+            <p>Showcase of my projects and works.</p>
+            <!-- Add portfolio items here -->
+        </div>
+     </section>
+
+     <!-- Resume Section -->
+     <section id="resume">
+        <div class="wrapper">
+            <h2>Resume</h2>
+            <p>Details of my professional experience and skills.</p>
+            <!-- Add resume content here -->
+        </div>
+     </section>
+
+     <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-container">
+            <!-- First Post -->
+            <div class="blog-post">
+                <div class="post-header">
+                    <img src="user1.jpg" alt="User Profile" class="user-profile">
+                    <div class="user-info">
+                        <h3>Louigie Felix</h3>
+                        <p>Posted on November 30, 2024</p>
+                    </div>
+                </div>
+                <div class="post-image">
+                    <img src="blog1.jpg" alt="Post Image">
+                </div>
+                <div class="post-caption">
+                    <p>Exploring the beauty of nature. Here's a glimpse of the serene landscapes I visited last weekend!</p>
+                </div>
+            </div>
+    
+            <!-- Second Post -->
+            <div class="blog-post">
+                <div class="post-header">
+                    <img src="user2.jpg" alt="User Profile" class="user-profile">
+                    <div class="user-info">
+                        <h3>Louigie Felix</h3>
+                        <p>Posted on November 29, 2024</p>
+                    </div>
+                </div>
+                <div class="post-image">
+                    <img src="blog2.jpg" alt="Post Image">
+                </div>
+                <div class="post-caption">
+                    <p>Had a productive coding session today. Here's a snapshot of my workspace setup!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+     <!-- Contact Section -->
+     <section id="contact">
+        <div class="wrapper">
+            <h2>Contact</h2>
+            <p>Get in touch with me.</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+     </section>
+
+     <!--- Typed JS for typing text effect -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
      <script>
-        /** creating button click show hide navbar **/
-        var togglebtn=document.querySelector(".togglebtn");
-        var nav=document.querySelector(".navlinks");
-        var links=document.querySelector(".navlinks li");
+        /** Creating button click show hide navbar **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelector(".navlinks li");
 
         togglebtn.addEventListener("click", function(){
             this.classList.toggle("click");
             nav.classList.toggle("open");
-        })
+        });
 
-        var typed=new Typed(".input",{
-            strings:["Frontend Developer","UX Designer","Web Developer"],
-            typedSpeed:70,
-            backSpeed:55,
-            loop:true
-        })
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "UX Designer", "Web Developer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
      </script>
 </body>
 </html>
