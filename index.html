@@ -2,287 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louigie Felix</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: rgb(63, 178, 171);
-            scroll-behavior: smooth;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .navbar {
-            width: 100%;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-sizing: border-box;
-        }
-
-        .navbar .name {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .navbar .buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .navbar .buttons a {
-            text-decoration: none;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 8px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .navbar .buttons a:hover {
-            background-color: rgba(255, 255, 255, 0.8);
-            color: rgb(63, 178, 171);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            margin: 5px 0;
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .navbar .buttons {
-                display: none;
-            }
-
-            .navbar .buttons.responsive {
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
-                display: flex;
-            }
-        }
-
-        section {
-            padding: 80px 20px 20px;
-            min-height: 100vh;
-            color: white;
-            text-align: center;
-            flex: 1;
-        }
-
-        #home {
-            background-color: rgb(63, 178, 171);
-        }
-
-        #about {
-            background-color: rgb(50, 140, 135);
-        }
-
-        #info {
-            background-color: rgb(40, 110, 106);
-        }
-
-        .btn-download {
-            background-color: white;
-            color: rgb(63, 178, 171);
-            padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-bottom: 30px;
-            display: inline-block;
-        }
-
-        .btn-download:hover {
-            background-color: rgb(63, 178, 171);
-            color: white;
-        }
-
-        .picture-gallery {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9; /* Default to 16:9 */
-            max-width: 100%;
-            overflow: hidden;
-        }
-
-        .picture-gallery img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: none;
-        }
-
-        .gallery-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .gallery-nav span {
-            font-size: 30px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .indicator-dots {
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .indicator-dots .dot {
-            height: 12px;
-            width: 12px;
-            margin: 0 2px;
-            background-color: white;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .indicator-dots .dot.active {
-            background-color: rgb(63, 178, 171);
-        }
-
-        footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .footer-icons a {
-            color: white;
-            font-size: 24px;
-            margin: 0 10px;
-        }
-
-        .footer-icons a:hover {
-            color: rgb(63, 178, 171);
-        }
-    </style>
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="name">LOUIGIE FELIX</div>
-        <div class="buttons">
-            <a href="#home">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#info">Info</a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-l"></i>
+                    <div class="logo-text">Louigie Felix</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Louigie Felix</h1>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta delectus dolorum 
+                        quibusdam maiores magni quod rem in porro, laborum, laudantium ex repellendus explicabo, 
+                        autem molestiae!
+                    </p>
 
-    <section id="home">
-        <h1>Welcome to Home</h1>
-        <a href="https://drive.google.com/file/d/1xCpPJmsV3MotvM97Yyw0g4eYUtEuckR1/view?usp=sharing" class="btn-download" target="_blank">Download CV</a>
-        <div class="picture-gallery">
-            <img src="omsc.logo (1).png" alt="Picture 1">
-            <img src="last.jpg" alt="Picture 2">
-            <img src="https://via.placeholder.com/1200x675?text=Picture+3" alt="Picture 3">
-            <div class="gallery-nav">
-                <span onclick="prevSlide()">&#10094;</span>
-                <span onclick="nextSlide()">&#10095;</span>
+                    <div class="btn-group">
+                       <a href="#" class="btn active">Download CV</a>
+                       <a href="#" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                 </div>
             </div>
-            <div class="indicator-dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
         </div>
-    </section>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
 
-    <section id="about">
-        <h1>About Me</h1>
-        <p>This is the About section. Here you can talk about yourself and your journey.</p>
-    </section>
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
 
-    <section id="info">
-        <h1>Info</h1>
-        <p>This section contains additional information, such as skills, certificates, and projects.</p>
-    </section>
-
-    <footer>
-        <div class="footer-icons">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin-in"></a>
-            <a href="#" class="fab fa-whatsapp"></a>
-        </div>
-        <p>&copy; 2024 Louigie Felix. All rights reserved.</p>
-    </footer>
-
-    <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.picture-gallery img');
-        const dots = document.querySelectorAll('.indicator-dots .dot');
-
-        function showSlide(n) {
-            if (n >= slides.length) slideIndex = 0;
-            if (n < 0) slideIndex = slides.length - 1;
-            slides.forEach(slide => slide.style.display = 'none');
-            dots.forEach(dot => dot.classList.remove('active'));
-            slides[slideIndex].style.display = 'block';
-            dots[slideIndex].classList.add('active');
-        }
-
-        function nextSlide() {
-            showSlide(++slideIndex);
-        }
-
-        function prevSlide() {
-            showSlide(--slideIndex);
-        }
-
-        function currentSlide(n) {
-            showSlide(slideIndex = n - 1);
-        }
-
-        setInterval(nextSlide, 7000); // Auto-slide every 7 seconds
-        showSlide(slideIndex);
-
-        function toggleMenu() {
-            const buttons = document.querySelector('.navbar .buttons');
-            buttons.classList.toggle('responsive');
-        }
-    </script>
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","UX Designer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
 </body>
 </html>
