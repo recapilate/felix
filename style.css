@@ -5,6 +5,7 @@
     font-family: poppins,sans-serif;
     text-decoration: none;
 }
+
 body{
     overflow-x: hidden;
 }
@@ -211,4 +212,142 @@ nav .navlinks li a{
     .hero-text{
         padding:40px 0px;
     }
+}
+/* General Section Styles */
+section {
+    padding: 80px 20px;
+    background: #333;
+    color: #e5e5e5;
+    text-align: center;
+}
+
+/* Alternate Background for Sections */
+section:nth-child(even) {
+    background: #222;
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 2.5rem;
+    color: #007ced;
+    margin-bottom: 20px;
+}
+
+/* Section Paragraph */
+section p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Contact Form */
+section#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+section#contact input,
+section#contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #007ced;
+    border-radius: 5px;
+    background: #444;
+    color: #fff;
+}
+
+section#contact button {
+    background: #007ced;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+section#contact button:hover {
+    background: #005bb5;
+}
+
+/* Smooth Scrolling (Optional) */
+html {
+    scroll-behavior: smooth;
+}
+/* Blog Section */
+#blog {
+    padding: 50px 20px;
+    background: #333;
+    color: #e5e5e5;
+}
+
+#blog h2 {
+    font-size: 2.5rem;
+    color: #007ced;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Blog Container */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual Blog Post */
+.blog-post {
+    background: #222;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(50% - 10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Post Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.user-info h3 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Post Image */
+.post-image img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.post-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Post Caption */
+.post-caption p {
+    font-size: 1rem;
+    color: #e5e5e5;
+    line-height: 1.5;
 }
