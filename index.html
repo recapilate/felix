@@ -2,185 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louigie Felix</title>
-    <link rel="stylesheet" href="style.css">
-    <!----Font awesome cdn  font icon css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Futuristic Neon Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            color: #0ff;
+            overflow: hidden;
+            position: relative;
+        }
+        .flashlight {
+            position: fixed;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.4) 40%, rgba(0, 255, 255, 0) 80%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            filter: blur(10px);
+            display: none;
+        }
+        .hidden-text {
+            font-size: 2rem;
+            font-weight: bold;
+            position: absolute;
+            top: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            letter-spacing: 5px;
+        }
+        .hidden-text span {
+            color: rgba(0, 255, 255, 0);
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0);
+            transition: color 0.1s ease, text-shadow 0.1s ease;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            position: relative;
+        }
+        .nav-buttons button {
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            background: #111;
+            color: #0ff;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-shadow: 0 0 10px #0ff;
+            box-shadow: 0 0 15px #0ff, 0 0 50px #0ff;
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-buttons button:hover {
+            background: #0ff;
+            color: #111;
+            box-shadow: 0 0 20px #0ff, 0 0 60px #0ff;
+        }
+        .hidden-text.bottom {
+            top: auto;
+            bottom: 15%;
+        }
+    </style>
 </head>
 <body>
-     <div class="hero-header" id="home">
-        <div class="wrapper">
-            <header>
-                <div class="logo">
-                    <i class="fa-solid fa-l"></i>
-                    <div class="logo-text">Louigie Felix</div>
-                </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="container">
-                 <div class="hero-pic">
-                    <img src="profile.png" alt="profile pic">
-                 </div>
-                 <div class="hero-text">
-                    <h5>Hi I'm <span class="input">C# Developer</span></h5>
-                    <h1>Louigie Felix</h1>
-                    <p>With a passion for creating innovative Windows applications and advanced knowledge in AI, I am dedicated to combining technology and creativity to build impactful solutions.
-                    </p>
-
-                    <div class="btn-group">
-                       <a href="https://drive.google.com/file/d/10NQWq29vC95HH3FJuuzsN_HyR71YLZon/view?usp=drive_link" class="btn active">Download CV</a>
-                       <a href="#contact" class="btn">Contact</a>
-                    </div>
-
-                    <div class="social">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    </div>
-                 </div>
-            </div>
+    <div class="flashlight"></div>
+    <div class="hidden-text" id="hiddenText">
+        <div>
+            <span>L</span><span>O</span><span>U</span><span>I</span><span>G</span><span>I</span><span>E</span> 
+            <span>R</span> 
+            <span>F</span><span>E</span><span>L</span><span>I</span><span>X</span>
         </div>
-     </div>
-
-     <!-- Portfolio Section -->
-     <section id="portfolio">
-        <div class="wrapper">
-            <h2>Portfolio</h2>
-            <p>Showcase of my projects and works.</p>
-            <!-- Add portfolio items here -->
+    </div>
+    <div class="nav-buttons">
+        <button onclick="navigate('home')">Home</button>
+        <button onclick="navigate('about')">About</button>
+    </div>
+    <div class="hidden-text bottom" id="hiddenTextBottom">
+        <div>
+            <span>V</span><span>A</span><span>N</span><span>N</span><span>E</span><span>S</span><span>A</span> 
+            <span>E</span><span>L</span><span>E</span><span>I</span><span>N</span><span>A</span> 
+            <span>C</span><span>A</span><span>J</span><span>A</span><span>Y</span><span>O</span><span>N</span>
         </div>
-     </section>
-
-     <!-- Resume Section -->
-     <section id="resume">
-        <div class="wrapper">
-            <h2>Resume</h2>
-            <p>Details of my professional experience and skills.</p>
-            <!-- Add resume content here -->
-        </div>
-     </section>
-
-     <section id="blog">
-        <h2>Blog</h2>
-        <div class="blog-container">
-            <!-- First Post -->
-            <div class="blog-post">
-                <div class="post-header">
-                    <img src="profile.png" alt="User Profile" class="user-profile">
-                    <div class="user-info">
-                        <h3>Louigie Felix</h3>
-                        <p>Posted on November 30, 2024</p>
-                    </div>
-                </div>
-                <div class="post-image">
-                    <img src="blog1.jpg" alt="Post Image">
-                </div>
-                <div class="post-caption">
-                    <p>
-                        Proud to receive this Certificate of Participation for the Campus Intramurals held at Occidental Mindoro State College - Lubang Campus! 🎉
-                    </p>
-                    <p>
-                        It was an honor to support our athletes and contribute to the spirit of sportsmanship and teamwork 
-                        during this exciting event. 🙌💪
-                    </p>
-                    <p>
-                        📸 Credits to The Image Publication for capturing this moment!
-                    </p>
-                </div>
-                 <div class="view-button">
-                <a href="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2FOMSCTheImage%2Fposts%2Fpfbid0tW3CJJBAd5tZsJSixnHN19qxyZML2TGUcde88A2rMWz3PGCiaLL5t4mdwqGdAXqrl&show_text=true&width=500" target="_blank" class="btn view-btn">View</a>
-                </div>
-            </div>
+    </div>
     
-            <!-- Second Post -->
-            <div class="blog-post">
-                <div class="post-header">
-                    <img src="profile.png" alt="User Profile" class="user-profile">
-                    <div class="user-info">
-                        <h3>Louigie Felix</h3>
-                        <p>Posted on November 29, 2024</p>
-                    </div>
-                </div>
-                <div class="post-image">
-                    <img src="cfw.jpg" alt="Post Image">
-                </div>
-                <div class="post-caption">
-                    <p>Honored to receive my Certificate of Completion for successfully completing 3 months of service in the Cash for Work program under Kalahi at OMSC Lubang Campus. Grateful for the opportunity and the experience!</p>
-                </div>
-            </div>
-        </div>
-
-         <!--- THIRD POST --->
-          <div class="blog-post">
-                <div class="post-header">
-                    <img src="profile.png" alt="User Profile" class="user-profile">
-                    <div class="user-info">
-                        <h3>Louigie Felix</h3>
-                        <p>Posted on November 29, 2024</p>
-                    </div>
-                </div>
-                <div class="post-image">
-                    <img src="IMG_0671.JPG" alt="Post Image">
-                </div>
-                <div class="post-caption">
-                    <p>Honored to receive my Certificate of Completion for successfully completing 3 months of service in the Cash for Work program under Kalahi at OMSC Lubang Campus. Grateful for the opportunity and the experience!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-
-     <!-- Contact Section -->
-     <section id="contact">
-        <div class="wrapper">
-            <h2>Contact</h2>
-            <p>Get in touch with me.</p>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-     </section>
-
-     <!--- Typed JS for typing text effect -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-     <script>
-        /** Creating button click show hide navbar **/
-        var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
-        var links = document.querySelector(".navlinks li");
-
-        togglebtn.addEventListener("click", function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
+    <script>
+        const flashlight = document.querySelector('.flashlight');
+        const letters = document.querySelectorAll('.hidden-text span, .hidden-text.bottom span');
+        let flashlightActive = false;
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'l') {
+                flashlightActive = !flashlightActive;
+                flashlight.style.display = flashlightActive ? 'block' : 'none';
+            }
         });
 
-        var typed = new Typed(".input", {
-            strings: ["Windows app Developer", "UI Designer", "Video Editor"],
-            typedSpeed: 70,
-            backSpeed: 55,
-            loop: true
+        let lastTap = 0;
+        document.addEventListener('touchend', () => {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+            if (tapLength < 300 && tapLength > 0) {
+                flashlightActive = !flashlightActive;
+                flashlight.style.display = flashlightActive ? 'block' : 'none';
+            }
+            lastTap = currentTime;
         });
-     </script>
+        
+        document.addEventListener('mousemove', (e) => {
+            if (!flashlightActive) return;
+            flashlight.style.top = `${e.clientY}px`;
+            flashlight.style.left = `${e.clientX}px`;
+            
+            letters.forEach(letter => {
+                const letterRect = letter.getBoundingClientRect();
+                const distance = Math.hypot(e.clientX - (letterRect.left + letterRect.width / 2), e.clientY - (letterRect.top + letterRect.height / 2));
+                
+                if (distance < 100) {
+                    letter.style.color = "#0ff";
+                    letter.style.textShadow = "0 0 15px #0ff";
+                } else {
+                    letter.style.color = "rgba(0, 255, 255, 0)";
+                    letter.style.textShadow = "0 0 15px rgba(0, 255, 255, 0)";
+                }
+            });
+        });
+        
+        function navigate(page) {
+            alert("Navigating to " + page);
+        }
+    </script>
 </body>
 </html>
